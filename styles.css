@@ -421,11 +421,12 @@ img, video { display: block; max-width: 100%; height: auto; }
     min-height: 0;
     padding: clamp(40px, 8vw, 80px) var(--gutter) 0;
     background-image: none;
+    background-color: var(--bg);
   }
   .hero::after {
     content: "";
     display: block;
-    margin: clamp(40px, 7vw, 64px) calc(-1 * var(--gutter)) 0;
+    margin: clamp(28px, 5vw, 48px) calc(-1 * var(--gutter)) 0;
     aspect-ratio: 1040 / 800;
     background-image: url("hero.jpg");
     background-size: cover;
