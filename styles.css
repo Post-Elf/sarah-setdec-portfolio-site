@@ -50,6 +50,7 @@ body.nav-open { overflow: hidden; }
 
 a { color: inherit; text-decoration: none; }
 a:hover, a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+.brand:hover, .brand:focus-visible { text-decoration: none; }
 
 img, video { display: block; max-width: 100%; height: auto; }
 
@@ -415,6 +416,21 @@ img, video { display: block; max-width: 100%; height: auto; }
   .nav-toggle { display: block; }
 
   .hero h1 { font-size: clamp(2rem, 9vw, 3.4rem); }
+
+  .hero {
+    min-height: 0;
+    padding: clamp(40px, 8vw, 80px) var(--gutter) 0;
+    background-image: none;
+  }
+  .hero::after {
+    content: "";
+    display: block;
+    margin: clamp(40px, 7vw, 64px) calc(-1 * var(--gutter)) 0;
+    aspect-ratio: 1040 / 800;
+    background-image: url("hero.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 
   .project {
     grid-template-columns: 1fr;
